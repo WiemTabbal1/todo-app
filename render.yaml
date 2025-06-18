@@ -2,7 +2,9 @@ services:
   - type: web
     name: todo-app
     env: java
-    envVersion: 17
-    buildCommand: "./mvnw clean install"
+    envVars:
+      - key: PORT
+        value: 8089
+    buildCommand: "./mvnw clean install -DskipTests"
     startCommand: "java -jar target/*.jar"
     plan: free
