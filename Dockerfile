@@ -19,7 +19,7 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 # Exposer le port utilisé par l'application
-EXPOSE 8080
+EXPOSE 8089
 
 # Commande pour lancer l'application
 ENTRYPOINT ["java", "-jar", "app.jar"]
