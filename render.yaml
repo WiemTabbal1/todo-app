@@ -2,6 +2,7 @@ services:
   - type: web
     name: todo-app
     env: java
+    envVersion: 17
     buildCommand: "./mvnw clean install"
     startCommand: "java -jar target/*.jar"
     plan: free
